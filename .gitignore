@@ -1,3 +1,7 @@
+**
+*/**
+!*/slipsnip/
+!**/.gitignore
 **pyc
 **swp
 **log

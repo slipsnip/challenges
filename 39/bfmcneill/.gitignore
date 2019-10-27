@@ -1,8 +1,0 @@
-#ignore vs code
-.vscode
-
-#ignore cache
-*_cache
-
-#ignore pytest-cov
-.coverage

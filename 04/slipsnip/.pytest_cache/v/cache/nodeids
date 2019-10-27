@@ -1,0 +1,5 @@
+[
+  "test_usertweets.py::TestUserTweets::test_first_tweet_returned_by_api",
+  "test_usertweets.py::TestUserTweets::test_num_tweets",
+  "test_usertweets.py::TestUserTweets::test_read_back_from_cached_csv"
+]
