@@ -39,7 +39,6 @@ class TweepyCache(object):
         # number of tweets user has
         num_tweets_of_user = user.statuses_count
         # number of tweets to get, maximum MAX_TWEETS
-        breakpoint()
         self._num_tweets = (num_tweets_of_user, MAX_TWEETS)[
             num_tweets_of_user >= MAX_TWEETS]
         self._max_id = max_id  # recieve no tweets past this tweet_id
@@ -57,8 +56,8 @@ class TweepyCache(object):
             if self._filename.stat().st_size == 0:
                 _id = self._user_id
                 # get user timeline, loop untill we recieve _num_tweets
-                cursor = (tweepy.Cursor(API.user_timeline, _id),
-                          tweepy.Cursor(API.user_timeline, _id,
+                cursor = (tweepy.Cursor(self._api.user_timeline, _id),
+                          tweepy.Cursor(self._api.user_timeline, _id,
                                         max_id=self._max_id))[self._max_id]
 
                 for tweet in [tweet for tweet in cursor.items(MAX_TWEETS)]:
